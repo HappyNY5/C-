@@ -15,9 +15,7 @@ namespace DelegateTests
 
             frsDeleg(); // вызываем делегат
 
-            strDeleg("first", "second");
-
-            // Console.Write(_value);
+            Console.WriteLine(strDeleg("first", "second"));
 
         }
 
@@ -28,8 +26,8 @@ namespace DelegateTests
 
         private static string WriteCurString(string name1 , string name2)
         {
-            Console.Write($"Hello ,{name1}. I like {name2}");
-            return null;
+            string _value = ($"Hello ,{name1}. I like {name2}");
+            return _value;
         }
 
     }
