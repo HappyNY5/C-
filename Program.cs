@@ -11,11 +11,11 @@ namespace DelegateTests
         {
             FirstDelegate frsDeleg = new(ShowResults); //присваиваем в делегат метод
 
-            StringDelegate strDeleg = new(WriteCurString);
+            StringDelegate strDeleg = new(WriteCurString); //присваиваем в делегат метод
 
             frsDeleg(); // вызываем делегат
 
-            Console.WriteLine(strDeleg("first", "second"));
+            Console.WriteLine(strDeleg("shit", "говно")); //выводим в консоль вызов делегата
 
         }
 
@@ -24,7 +24,7 @@ namespace DelegateTests
             Console.WriteLine("Someeeeee_shit here");
         }
 
-        private static string WriteCurString(string name1 , string name2)
+        private static string WriteCurString(string name1 , string name2) //метод вставляет передваваемые значения
         {
             string _value = ($"Hello ,{name1}. I like {name2}");
             return _value;
